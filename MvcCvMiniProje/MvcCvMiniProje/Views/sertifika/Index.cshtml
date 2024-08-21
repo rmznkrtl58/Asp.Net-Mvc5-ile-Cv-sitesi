@@ -1,0 +1,90 @@
+﻿@using MvcCvMiniProje.Models.entities
+@model List<tbl_sertifikalar>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@{string renk = ""; }
+<!DOCTYPE html>
+<html>
+<body class="hold-transition sidebar-mini">
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+
+                <!-- /.col -->
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-header p-2">
+                          
+                        </div><!-- /.card-header -->
+                        <div class="card-body">
+                              <h4 style="padding-left:60px">Sertifikalar:</h4>
+                                <div class="tab-pane" id="timeline">
+                                    <!-- The timeline -->
+                                    <div class="timeline timeline-inverse">
+                                        <!-- timeline time label -->
+                                       
+                                        <!-- /.timeline-label -->
+                                        <!-- timeline item -->
+                                        @foreach(var x in Model) {
+                                            if (x.Id % 2 == 0)
+                                            {
+                                                renk = "fas fa-trophy bg-green";
+                                            }
+                                            if(x.Id% 2 != 0)
+                                            {
+                                                renk = "fas fa-trophy bg-blue";
+                                            }
+                                    <div>
+                                        <i class="@renk"></i>
+                                        <div class="timeline-item">
+                                            <div class="timeline-body">
+                                                @x.Açıklama
+                                            </div>
+                                            <div class="timeline-footer">
+                                                <a href="/sertifika/sgetir/@x.Id" class="btn btn-info btn-sm">Düzenle</a>
+                                                <a href="/sertifika/ssil/@x.Id" class="btn btn-danger btn-sm">Sil</a>
+                                            </div>
+                                        </div>
+                                      
+                                    </div>
+                                        }
+                                        <!-- END timeline item -->
+                                        <!-- timeline item -->
+                                        
+                                        <!-- END timeline item -->
+                                        <!-- timeline item -->
+                                        
+                                        <!-- END timeline item -->
+                                        <!-- timeline time label -->
+                                        
+                                        <!-- /.timeline-label -->
+                                        <!-- timeline item -->
+                                        
+                                        <!-- END timeline item -->
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                    <a href="/sertifika/yenisertifika" class="btn btn-secondary">Sertifika Ekle</a>
+                            <!-- /.tab-content -->
+                        </div><!-- /.card-body -->
+                    </div>
+                    <!-- /.nav-tabs-custom -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+      
+    </section>
+</body>
+</html>
+
+
+
+

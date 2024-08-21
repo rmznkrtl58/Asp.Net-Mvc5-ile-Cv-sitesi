@@ -1,0 +1,31 @@
+﻿@using MvcCvMiniProje.Models.entities
+@model MvcCvMiniProje.Models.entities.tbl_eğitim
+@{
+    ViewBag.Title = "yeniegitim";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+<br />
+<h2>Eğitim Ekleme Sayfası</h2>
+<form class="form-group" method="post">
+    <div style="margin-top:10px">
+        @Html.TextBoxFor(m => m.Başlık, new { @class = "form-control", @placeholder = "Başlık" })
+        @Html.ValidationMessageFor(x=>x.Başlık,"",new {@style="color:red" })
+    </div>
+    <div style="margin-top:5px">
+        @Html.TextBoxFor(m => m.AltBaşlık, new { @class = "form-control", @placeholder = "Alt Başlık" })
+    </div>
+    <div style="margin-top:5px">
+        @Html.TextBoxFor(m => m.AltBaşlık2, new { @class = "form-control", @placeholder = "Alt Başlık2" })
+    </div>
+    <div style="margin-top:5px">
+        @Html.TextBoxFor(m => m.Gno, new { @class = "form-control", @placeholder = "Gno" })
+        @Html.ValidationMessageFor(x=>x.Gno,"",new {@style="color:blue" })
+    </div>
+    <div style="margin-top:5px">
+        @Html.TextBoxFor(m => m.Tarih, new { @class = "form-control", @placeholder = "Tarih" })
+    </div>
+    <div style="margin-top:5px">
+     <button class="btn btn-info">Kaydet</button>
+    </div>
+</form>
+

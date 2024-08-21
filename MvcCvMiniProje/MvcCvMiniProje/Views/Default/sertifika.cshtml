@@ -1,0 +1,13 @@
+﻿@using MvcCvMiniProje.Models.entities
+@model List<tbl_sertifikalar>
+<div class="resume-section-content">
+    <h2 class="mb-5">SERTİFİKALARIM</h2>
+    @foreach(var x in Model) {
+    <ul class="fa-ul mb-0">
+        <li>
+            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+            @x.Açıklama
+        </li>
+    </ul>
+    }
+</div>

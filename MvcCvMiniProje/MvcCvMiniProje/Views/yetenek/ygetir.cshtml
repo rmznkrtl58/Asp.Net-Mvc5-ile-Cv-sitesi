@@ -1,0 +1,24 @@
+﻿@using MvcCvMiniProje.Models.entities
+@model MvcCvMiniProje.Models.entities.tbl_yetenekler
+@{
+    ViewBag.Title = "ygetir";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+<br />
+<h2>Yetenek Düzenleme Sayfası</h2>
+@using (Html.BeginForm("güncelle", "yetenek", FormMethod.Post))
+{
+    @Html.HiddenFor(m => m.Id)
+    <div style="margin-top:5px">
+        @Html.Label("Yetenek:")
+        @Html.TextBoxFor(m => m.Yetenek, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:5px">
+        @Html.Label("Oran")
+        @Html.TextBoxFor(m => m.Oran, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:5px">
+        <button class="btn btn-info">Güncelle</button>
+    </div>   
+}
+

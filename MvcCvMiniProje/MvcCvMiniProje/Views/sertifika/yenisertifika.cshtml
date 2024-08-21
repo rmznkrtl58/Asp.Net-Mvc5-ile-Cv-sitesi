@@ -1,0 +1,20 @@
+﻿@using MvcCvMiniProje.Models.entities
+@model MvcCvMiniProje.Models.entities.tbl_sertifikalar
+@{
+    ViewBag.Title = "yenisertifika";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+<br />
+<h3>Sertifika Ekleme Sayfası</h3>
+<form class="form-group" method="post">
+    <div style="margin-top:5px">
+        @Html.TextBoxFor(m => m.Tarih, new { @class = "form-control" ,@placeholder="Tarih"})
+    </div>
+    <div style="margin-top:5px">
+        @Html.TextBoxFor(m => m.Açıklama, new { @class = "form-control", @placeholder = "Açıklama" })
+    </div>
+    <div style="margin-top:5px">
+        <button class="btn btn-info">Kaydet</button>
+    </div>
+
+</form>

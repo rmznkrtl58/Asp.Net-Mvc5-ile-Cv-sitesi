@@ -1,0 +1,17 @@
+﻿@using MvcCvMiniProje.Models.entities
+@model List<tbl_hobiler>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+<br />
+<h3 style="color:red">Hobilerim:</h3>
+<form class="form-group" method="post">
+ @foreach(var x in Model) {
+    <div>
+        <textarea class="form-control" style="height:130px" name="Açıklama1">@x.Açıklama1</textarea>
+    </div>
+ }
+    <button style="margin-top:7px" class="btn btn-warning">Güncelle</button>
+</form>
+

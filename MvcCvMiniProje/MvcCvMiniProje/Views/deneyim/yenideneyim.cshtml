@@ -1,0 +1,26 @@
+﻿@using MvcCvMiniProje.Models.entities
+@model MvcCvMiniProje.Models.entities.tbl_deneyimlerim
+@{
+    ViewBag.Title = "yenideneyim";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+<br />
+<h2>Deneyim Ekleme Sayfası</h2>
+<form class="form-group" method="post" style="margin-top:7px">
+    <div style="margin-top:7px">
+        @Html.TextBoxFor(m => m.Başlık, new { @class = "form-control", @placeholder = "Başlık" })
+    </div>
+    <div style="margin-top:7px">
+        @Html.TextBoxFor(m => m.AltBaşlık, new { @class = "form-control", @placeholder = "Alt Başlık" })
+    </div>
+    <div style="margin-top:7px">
+        @Html.TextAreaFor(m => m.Acıklama, new { @class = "form-control", @placeholder = "Başlık" })
+    </div>
+    <div style="margin-top:7px">
+        @Html.TextBoxFor(m => m.Tarih, new { @class = "form-control", @placeholder = "Tarih" })
+    </div>
+    <div style="margin-top:7px">
+        <button class="btn btn-info">Deneyim Ekle</button>
+    </div>
+</form>
+

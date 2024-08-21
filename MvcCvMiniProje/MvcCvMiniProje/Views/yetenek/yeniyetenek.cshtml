@@ -1,0 +1,22 @@
+﻿@using MvcCvMiniProje.Models.entities
+@model MvcCvMiniProje.Models.entities.tbl_yetenekler 
+@{
+    ViewBag.Title = "yeniyetenek";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+<br />
+<h2>Yetenek Ekle</h2>
+<form class="form-group" method="post">
+    <div style="margin-top:5px">
+        @Html.Label("Yetenek:")
+        @Html.TextBoxFor(m => m.Yetenek,new {@class="form-control" })
+    </div>
+    <div style="margin-top:5px">
+        @Html.Label("Oran:")
+        @Html.TextBoxFor(m => m.Oran, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:5px">
+        <button class="btn btn-success">Kaydet</button>
+    </div>
+</form>
+

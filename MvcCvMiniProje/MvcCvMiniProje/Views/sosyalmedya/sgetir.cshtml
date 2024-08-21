@@ -1,0 +1,26 @@
+﻿@using MvcCvMiniProje.Models.entities
+@model MvcCvMiniProje.Models.entities.tbl_sosyalmedya
+@{
+    ViewBag.Title = "sgetir";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+<br />
+<form method="post" class="form-group">
+    @Html.HiddenFor(m => m.Id)
+    <div style="margin-top:7px">
+        @Html.Label("Sosyal Medya Adı:", new { @style = "color:red" })
+        @Html.TextBoxFor(m => m.Ad, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:7px">
+        @Html.Label("Sosyal Medya Linki:",new { @style = "color:red" })
+        @Html.TextBoxFor(m => m.Link, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:7px">
+        @Html.Label("Sosyal Medya İkonu:",new { @style = "color:red" })
+        @Html.TextBoxFor(m => m.İcon, new { @class = "form-control" })
+    </div>
+    <div style="margin-top:7px">
+        <button class="btn btn-success">Güncelle</button>
+    </div>
+</form>
+

@@ -1,0 +1,32 @@
+﻿@using MvcCvMiniProje.Models.entities
+@model List<tbl_sosyalmedya>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Id</th>
+        <th>Ad</th>
+        <th>Link</th>
+        <th>İkon</th>
+        <th>İşlemler</th>
+    </tr>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <tr>
+                <td>@x.Id</td>
+                <td>@x.Ad</td>
+                <td>@x.Link</td>
+                <td>@x.İcon</td>
+                <td><a href="/sosyalmedya/sgetir/@x.Id" class="btn btn-warning" >Düzenle</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+
+

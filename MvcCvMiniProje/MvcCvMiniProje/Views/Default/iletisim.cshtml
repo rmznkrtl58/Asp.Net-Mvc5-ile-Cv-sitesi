@@ -1,0 +1,22 @@
+﻿@using MvcCvMiniProje.Models.entities
+@model MvcCvMiniProje.Models.entities.tbl_iletişim
+<div class="resume-section-content">
+    <h2 class="mb-5">İLETİŞİM</h2>
+    <form class="form-group" method="post">
+        <div>
+            @Html.TextBoxFor(m => m.AdSoyad, new { @class = "form-control", @placeholder = "Adınız Soyadınız" })
+        </div>
+        <div style="margin-top:7px">
+            @Html.TextBoxFor(m => m.Mail, new { @class = "form-control", @placeholder = "E-Posta" })
+        </div>
+        <div style="margin-top:7px">
+            @Html.TextBoxFor(m => m.Konu, new { @class = "form-control", @placeholder = "Konu" })
+        </div>
+        <div style="margin-top:7px">
+            @Html.TextAreaFor(m => m.Mesaj, new { @class = "form-control", @placeholder = "Mesaj",@style= "height:100px" })
+        </div>
+        <div style="margin-top:7px">
+             <button class="btn btn-info">Gönder</button>
+        </div>
+    </form>
+</div>

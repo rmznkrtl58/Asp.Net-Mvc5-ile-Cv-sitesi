@@ -1,0 +1,34 @@
+﻿@using MvcCvMiniProje.Models.entities
+@model List<tbl_deneyimlerim>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_adminlayout.cshtml";
+}
+<br />
+<h3>Deneyim Listesi</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>Id:</th>
+        <th>Başlık:</th>
+        <th>AltBaşlık:</th>
+        <th>Açıklama:</th>
+        <th>Tarih:</th>
+        <th>Sil</th>
+        <th>Düzenle</th>
+    </tr>
+    <tbody>
+    @foreach(var item in Model) {
+      <tr>
+          <td>@item.Id</td>
+          <td>@item.Başlık</td>
+          <td>@item.AltBaşlık</td>
+          <td>@item.Acıklama</td>
+          <td>@item.Tarih</td>
+          <td><a href="/deneyim/dsil/@item.Id" class="btn btn-danger">Sil</a></td>
+          <td><a href="/deneyim/dgetir/@item.Id" class="btn btn-warning">Güncelle</a></td>
+      </tr>
+    }
+    </tbody>
+</table>
+<a href="/deneyim/yenideneyim" class="btn btn-success">Deneyim Ekle</a>
+
